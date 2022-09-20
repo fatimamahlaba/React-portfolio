@@ -21,29 +21,32 @@ const Navbar = () => {
 
 
   return (
-    <div classname={color ? "header header-bg" : "header"}>
+    <div className={color ? "header header-bg" : "header"}>
       <Link to="/">
-        <h1>Project</h1>
       </Link>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
-            <Link to="/">Home</Link>
+            <Link to="/">About</Link>
         </li>
         <li>
-            <Link to="/about">About</Link>
+            <Link to="/about">Experience</Link>
         </li>
         <li>
-            <Link to="/project">Project</Link>
+            <Link to="/project">Work</Link>
         </li>
         <li>
             <Link to="/contact">Contact</Link>
         </li>
+        <Link to='https://fatimamahlaba.github.io'>
+        <button className="button">Resume</button>
+        </Link>
       </ul>
+      
       <div className="hamburger" onClick= {handleClick}>
         {click ? ( 
-          <FaTimes size={20} style={{ color: "#fff"}} />
+          <FaTimes size={20} style={{ color: "#64ffda"}} />
         ) : (
-          <FaBars size={20} style={{ color: "#fff"}} />
+          <FaBars size={20} style={{ color: "#64ffda"}} />
         )}
       </div>
     </div>
